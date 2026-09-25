@@ -10,3 +10,16 @@
 .grade-groups{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.grade-box{border:1px solid #d7e2ea;border-radius:12px;padding:14px;background:#fbfdff}.grade-box h4{margin:0 0 12px;color:#123b5d;font-size:14px}.grade-row{display:grid;grid-template-columns:55px 1fr 42px;gap:8px;align-items:center;margin:8px 0;font-size:12px}.grade-track{height:12px;background:#e9f1f6;border-radius:999px;overflow:hidden}.grade-fill{height:100%;background:linear-gradient(90deg,#1c6fa5,#6bb8df);border-radius:999px}.grade-row strong{text-align:right;color:#123b5d}.grade-sex{font-size:10px;color:#71808e;margin-top:2px}
 .mini-donut-wrap{display:flex;align-items:center;justify-content:center;gap:28px;min-height:190px}.mini-donut{width:150px;height:150px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(#2477b2 0 var(--female-pct,88%),#7bb9dc var(--female-pct,88%) 100%);position:relative}.mini-donut:after{content:"";position:absolute;width:92px;height:92px;border-radius:50%;background:#fff}.mini-donut>div{z-index:1;text-align:center}.mini-donut strong{display:block;font-size:25px;color:#123b5d}.mini-donut span{font-size:11px;color:#71808e}.sex-legend.compact{min-width:175px}.sex-legend.compact>div{grid-template-columns:14px 1fr auto;gap:8px}.sex-legend.compact small{grid-column:2/4}.dot.female{background:#2477b2}.dot.male{background:#7bb9dc}
 @media(max-width:900px){.grade-groups{grid-template-columns:1fr}.viz-item{grid-template-columns:110px 1fr 58px}.mini-donut-wrap{flex-direction:column}}
+
+.brand-logo{width:105px;height:46px;object-fit:contain;display:block;flex:0 0 auto}
+
+/* v6 total-first + ayuda memoria */
+.kpi.featured{border:2px solid #1769aa;background:linear-gradient(135deg,#fff,#eef7fd)}
+.kpi-sub{font-size:10px;color:#7b8996;margin-top:5px;font-weight:650}
+.micro-note{font-size:11px;color:#718090;margin-top:8px;line-height:1.4}
+tfoot td{background:#f1f6fa;border-top:2px solid #b9cedd;color:#123b5d}
+.total-row td{background:#eef5fa}
+.ayuda-hero{border-left:5px solid #1769aa}
+.ayuda-hero p,.view#ayuda p{line-height:1.55;color:#405466}
+.ayuda-info{grid-template-columns:repeat(2,1fr)}
+@media(max-width:900px){.ayuda-info{grid-template-columns:1fr}}

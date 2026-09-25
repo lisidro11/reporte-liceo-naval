@@ -1,4 +1,4 @@
-console.info("Reporte Liceo Naval v4 - 25/09/2026");
+console.info("Reporte Liceo Naval v6 - 25/09/2026");
 
 const D=window.APP_DATA;const fmt=n=>Number(n).toLocaleString('es-PE');
 const mainRows=D.siagie.filter(x=>x.ie==='LICEO NAVAL ALMIRANTE GUISE'), peadRows=D.siagie.filter(x=>x.ie.startsWith('PEAD'));
@@ -8,8 +8,10 @@ function renderBars(rows,el){let mx=Math.max(...rows.map(x=>x.total));document.g
 function matrix(rows){return rows.map(x=>`<tr><td>${x.nivel}</td><td>${x.codmod}</td><td>${fmt(x.h)}</td><td>${fmt(x.m)}</td><td><b>${fmt(x.total)}</b></td></tr>`).join('')}
 document.querySelectorAll('[data-main]').forEach(x=>x.textContent=fmt(totals.main));document.querySelectorAll('[data-pead]').forEach(x=>x.textContent=fmt(totals.pead));document.querySelectorAll('[data-all]').forEach(x=>x.textContent=fmt(totals.all));document.querySelectorAll('[data-plazas]').forEach(x=>x.textContent=fmt(D.nexus.total));
 renderBars(mainRows,'barsMain');document.getElementById('matBody').innerHTML=matrix(mainRows);document.getElementById('peadBody').innerHTML=matrix(peadRows);
-const h=sum(D.siagie,'h'),m=sum(D.siagie,'m'),sexTotal=h+m,pct=h/sexTotal*100;let dn=document.getElementById('donut');dn.style.setProperty('--men-pct',pct+'%');document.getElementById('sexTotal').textContent=fmt(sexTotal);document.getElementById('menVal').textContent=fmt(h);document.getElementById('womenVal').textContent=fmt(m);document.getElementById('menPct').textContent=(h/sexTotal*100).toFixed(1)+'%';document.getElementById('womenPct').textContent=(m/sexTotal*100).toFixed(1)+'%';
-document.getElementById('nexusBody').innerHTML=Object.entries(D.nexus.nivel).map(([k,v])=>`<tr><td>${k}</td><td>${v}</td><td>${Math.round(v/D.nexus.total*100)}%</td></tr>`).join('');
+function totalFoot(rows){return `<tr class="total-row"><td colspan="2"><b>TOTAL</b></td><td><b>${fmt(sum(rows,'h'))}</b></td><td><b>${fmt(sum(rows,'m'))}</b></td><td><b>${fmt(sum(rows,'total'))}</b></td></tr>`}
+document.getElementById('matFoot').innerHTML=totalFoot(mainRows);document.getElementById('peadFoot').innerHTML=totalFoot(peadRows);
+const servicePct=totals.main/totals.all*100;let dn=document.getElementById('donut');dn.style.setProperty('--men-pct',servicePct+'%');
+const nexusBody=document.getElementById('nexusBody'); if(nexusBody){nexusBody.innerHTML=Object.entries(D.nexus.nivel).map(([k,v])=>`<tr><td>${k}</td><td>${v}</td><td>${Math.round(v/D.nexus.total*100)}%</td></tr>`).join('');}
 document.getElementById('docs').innerHTML=D.docs.map(x=>`<div class="doc"><b>📄 ${x.name}</b><div class="meta">Documento sustentatorio RIE</div><a href="${x.file}" target="_blank">Ver documento →</a></div>`).join('');
 function printReport(){window.print()}
 

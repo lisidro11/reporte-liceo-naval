@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 72" role="img" aria-label="DRELM">
+<rect x="1.5" y="1.5" width="207" height="69" rx="12" fill="#fff" fill-opacity="0.06" stroke="#fff" stroke-width="3"/>
+<text x="16" y="35" fill="#fff" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="800" letter-spacing=".5">DRELM</text>
+<text x="16" y="54" fill="#dbeaf5" font-family="Arial,Helvetica,sans-serif" font-size="8.8" font-weight="600">LIMA METROPOLITANA</text>
+<path d="M160 18h31v5h-31zm0 11h31v5h-31zm0 11h31v5h-31z" fill="#fff" opacity=".9"/>
+</svg>
