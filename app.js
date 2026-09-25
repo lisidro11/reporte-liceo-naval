@@ -1,3 +1,4 @@
+console.info("Reporte Liceo Naval v4 - 25/09/2026");
 
 const D=window.APP_DATA;const fmt=n=>Number(n).toLocaleString('es-PE');
 const mainRows=D.siagie.filter(x=>x.ie==='LICEO NAVAL ALMIRANTE GUISE'), peadRows=D.siagie.filter(x=>x.ie.startsWith('PEAD'));
