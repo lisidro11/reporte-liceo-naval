@@ -1,0 +1,6 @@
+APP REPORTE INSTITUCIONAL - LICEO NAVAL ALMIRANTE GUISE
+
+1. Abra index.html en Chrome/Edge.
+2. Para GitHub Pages, suba TODO el contenido de esta carpeta conservando /docs.
+3. El botón Imprimir / PDF usa la impresión del navegador.
+4. Fuentes: RIE, SIAGIE (23/09/2026) y NEXUS (28/08/2026).
